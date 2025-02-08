@@ -8,8 +8,6 @@ import lombok.Setter;
 
 @Entity
 @Table(name="users")
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
@@ -19,4 +17,20 @@ public class User {
 
     @Column(nullable = false, unique = true)
     private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
