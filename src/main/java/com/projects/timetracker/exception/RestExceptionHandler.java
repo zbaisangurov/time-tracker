@@ -21,4 +21,14 @@ public class RestExceptionHandler {
     public ResponseEntity<String> handleTaskNotFound(TaskNotFoundException e) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
     }
+
+    @ExceptionHandler(TimeAlreadyExistsException.class)
+    public ResponseEntity<String> handleTimeAlreadyExists(TimeAlreadyExistsException e) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
+    }
+
+    @ExceptionHandler(TimeNotFoundException.class)
+    public ResponseEntity<String> handleTimeNotFound(TimeNotFoundException e) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+    }
 }
