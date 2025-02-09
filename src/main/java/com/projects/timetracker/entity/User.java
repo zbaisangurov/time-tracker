@@ -8,8 +8,6 @@ import lombok.Setter;
 
 @Entity
 @Table(name="users")
-@NoArgsConstructor
-@AllArgsConstructor
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,5 +30,13 @@ public class User {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public User(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public User() {
     }
 }
