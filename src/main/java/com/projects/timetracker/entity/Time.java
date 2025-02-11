@@ -2,6 +2,7 @@ package com.projects.timetracker.entity;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,10 +13,10 @@ public class Time {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "start_point", nullable = false)
     private LocalDateTime startPoint;
 
-    @Column
+    @Column (name = "stop_point")
     private LocalDateTime stopPoint;
 
     @ManyToOne
