@@ -18,4 +18,5 @@ public interface TimeRepository extends JpaRepository<Time, Long> {
     void deleteByTaskIdIn(List<Long> taskIds);
 
     Optional<Time> findByTaskIdAndStopPointIsNull(Long taskId);
+    List<Time> findAllByStopPointIsNull();
 }
