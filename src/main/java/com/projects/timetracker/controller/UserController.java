@@ -20,8 +20,8 @@ public class UserController {
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<String> updateUser(@PathVariable Long id, @RequestParam String name) {
-        userService.updateUser(id, name);
+    public ResponseEntity<String> updateUser(@PathVariable Long id, @RequestBody UserRequest userRequest) {
+        userService.updateUser(id, userRequest.getName());
         return ResponseEntity.ok("Имя пользователя изменено");
     }
 
