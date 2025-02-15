@@ -71,3 +71,17 @@ Maven, язык — Java 17.
 ```
 
 3. Во всех остальных запросах тело отсутствует.
+
+## Доступ к Swagger UI
+
+Swagger UI доступен по следующему адресу:
+
+```aiignore
+http://localhost:8080/swagger-ui/index.html
+```
+
+Файл OpenAPI JSON доступен по адресу:
+
+```aiignore
+http://localhost:8080/v3/api-docs
+```
